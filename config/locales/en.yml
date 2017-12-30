@@ -1,0 +1,9 @@
+en:
+  notice_unable_to_obtain_oauth2_credentials: "Unable to obtain credentials."
+  notice_unable_to_obtain_oauth2_access_token: "Unable to obtain access token."
+  notice_access_denied: "You must allow to use you OAuth credentials to enter this site."
+  notice_user_access_denied: "You are not authority to enter this site."
+  notice_oauth_account_denied: "You are not authority to enter this site. Your username or email is illogical."
+  login_via_oauth: "Login with OAuth"
+  label_replace_redmine_login: Replace Redmine login page
+

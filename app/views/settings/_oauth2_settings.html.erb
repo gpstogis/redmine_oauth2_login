@@ -1,0 +1,47 @@
+<%= stylesheet_link_tag 'settings', :plugin => 'redmine_oauth2_login' %>
+
+<div class="roi_settings">
+  <p>
+    <label>Check to enable OAuth authentification:</label>
+    <%= check_box_tag "settings[enabled]", true, @settings['enabled'] %>
+  </p>
+  <p>
+    <label><%= l(:label_replace_redmine_login) %></label>
+    <%= check_box_tag 'settings[replace_redmine_login]', true, @settings['replace_redmine_login'] %>
+  </p>
+  <p><b>Warning! All fields are required!</b></p>
+  <p>
+    <label>OAuth Authorization Provider:</label>
+    <%= select_tag 'settings[provider]', options_for_select({"GitHub" => "github", "OAuth 2.0" => "oauth2"},
+        :selected => @settings['provider']) %>
+  </p>
+  <p>
+    <label>OAuth Authorization Code URL:</label>
+    <%= text_field_tag 'settings[authorization_uri]', @settings['authorization_uri'] %>
+  </p>
+  <p>
+    <label>OAuth Access Token URL:</label>
+    <%= text_field_tag 'settings[access_token_uri]', @settings['access_token_uri'] %>
+  </p>
+  <p>
+    <label>Client ID:</label>
+    <%= text_field_tag 'settings[client_id]', @settings['client_id'] %>
+  </p>
+  <p>
+    <label>Client Secret:</label>
+    <%= text_field_tag 'settings[client_secret]', @settings['client_secret'] %>
+  </p>
+  <p>
+    <label>OAuth User Info URL:</label>
+    <%= text_field_tag 'settings[user_info_uri]', @settings['user_info_uri'] %>
+  </p>
+  <p>
+    <label>OAuth User Logout URL:</label>
+    <%= text_field_tag 'settings[user_logout_uri]', @settings['user_logout_uri'] %>
+  </p>
+  <p>
+    <label>Check to enable auto create new user:</label>
+    <%= check_box_tag "settings[user_auto_create]", true, @settings['user_auto_create'] %>
+  </p>
+
+</div>
